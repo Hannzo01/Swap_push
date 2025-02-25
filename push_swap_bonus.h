@@ -29,7 +29,6 @@ typedef struct s_list
 	int				target_pos;
 	struct s_list	*next;
 	struct s_list	*target;
-	// traversing stack_a just once for each element in stack_b.
 }					t_list;
 
 //  PARSING FUNCTIONS //

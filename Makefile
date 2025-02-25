@@ -20,14 +20,20 @@ CFLAGS = -Wall -Wextra -Werror
 NAME = push_swap
 BONUS_NAME = checker
 
+HEADER = push_swap.h
+HEADER_BONUS = push_swap_bonus.h
+
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
-bonus: $(BONUS_OBJS)
+%.o: %.c $(HEADER)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+bonus: $(BONUS_OBJS) $(HEADER_BONUS)
 	$(CC) $(CFLAGS) $(BONUS_OBJS) -o $(BONUS_NAME)
-	@touch bonus
+	touch bonus
 
 clean:
 	rm -f $(OBJ) $(BONUS_OBJS)

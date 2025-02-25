@@ -16,7 +16,6 @@
 // HEADERS //
 # include <limits.h>
 # include <stdbool.h>
-# include <stdio.h> // delete later
 # include <stdlib.h>
 # include <unistd.h>
 
@@ -32,7 +31,6 @@ typedef struct s_list
 	int				target_pos;
 	struct s_list	*next;
 	struct s_list	*target;
-	// traversing stack_a just once for each element in stack_b.
 }					t_list;
 
 //  PARSING FUNCTIONS //
